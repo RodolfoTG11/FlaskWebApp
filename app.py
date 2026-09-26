@@ -10,13 +10,13 @@ def perfil():
 
     apellidos = {
         "primer_apellido": "Tapia",
-        "segundo_apellido": "",
+        "segundo_apellido": "Garcia",
     }
 
     asignaturas = [
         "Machine Learning",
-        "Administración de Proyectos",
-        "Estructura de Datos",
+        "Big Data",
+        "Proyecto Integrador de Sistemas Ciberfísicos",
     ]
 
     hobbies = [
