@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil - {{ nombre }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 640px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #222;
+            background-color: #f7f7f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        section {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #34495e;
+            font-size: 1.1em;
+        }
+        ul {
+            margin: 8px 0 0 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Perfil de {{ nombre }}</h1>
+
+    <section>
+        <h2>Nombre</h2>
+        <p>{{ nombre }}</p>
+    </section>
+
+    <section>
+        <h2>Apellidos</h2>
+        <p><strong>Primer apellido:</strong> {{ apellidos.primer_apellido }}</p>
+        <p><strong>Segundo apellido:</strong>
+            {% if apellidos.segundo_apellido %}
+                {{ apellidos.segundo_apellido }}
+            {% else %}
+                (no aplica)
+            {% endif %}
+        </p>
+    </section>
+
+    <section>
+        <h2>Asignaturas</h2>
+        <ul>
+            {% for asignatura in asignaturas %}
+                <li>{{ asignatura }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section>
+        <h2>Hobbies</h2>
+        <ul>
+            {% for hobby in hobbies %}
+                <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+</body>
+</html>
